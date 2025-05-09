@@ -45,3 +45,49 @@ def binary_search(arr, target):
             hi = mid - 1
     return -1
 # Overall time complexity: O(log n)
+```
+
+---
+
+### 🔹 Binary Search
+```python
+def binary_search(arr, target):
+    lo, hi = 0, len(arr) - 1
+    while lo <= hi:
+        mid = (lo + hi) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            lo = mid + 1
+        else:
+            hi = mid - 1
+    return -1
+# Worst-case: O(log n)
+```
+
+Switching from linear to binary search on sorted data reduces steps from n to log n—critical for large n.
+
+---
+
+### 🔹 Space Complexity
+Measures extra memory usage.
+• In-place algorithms use O(1) extra space (e.g., in-place quicksort).
+• Not in-place may require O(n) auxiliary space (e.g., mergesort’s merge).
+
+---
+
+### 🔹 Amortized Analysis
+Smooths out occasional expensive operations by averaging over a sequence.
+• Dynamic array resizing: occasional O(n) copy, but amortized O(1) per insert.
+
+---
+
+### 🔹 Master Theorem
+For recurrences of form T(n) = a T(n/b) + f(n), compare f(n) to n^{log_b(a)}:
+
+1. If f(n)=O(n^{log_b(a)−ε}), T(n)=Θ(n^{log_b(a)})
+2. If f(n)=Θ(n^{log_b(a)}·log^k n), T(n)=Θ(n^{log_b(a)}·log^{k+1} n)
+3. If f(n)=Ω(n^{log_b(a)+ε}) and regularity holds, T(n)=Θ(f(n))
+
+> Example: Merge Sort \
+> T(n)=2 T(n/2)+Θ(n) ⇒ case 2 ⇒ Θ(n log n)
