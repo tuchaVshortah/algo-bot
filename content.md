@@ -70,14 +70,14 @@ Switching from linear to binary search on sorted data reduces steps from n to lo
 ---
 
 ### 🔹 Space Complexity
-Measures extra memory usage.
-• In-place algorithms use O(1) extra space (e.g., in-place quicksort).
+Measures extra memory usage. \
+• In-place algorithms use O(1) extra space (e.g., in-place quicksort). \
 • Not in-place may require O(n) auxiliary space (e.g., mergesort’s merge).
 
 ---
 
 ### 🔹 Amortized Analysis
-Smooths out occasional expensive operations by averaging over a sequence.
+Smooths out occasional expensive operations by averaging over a sequence. \
 • Dynamic array resizing: occasional O(n) copy, but amortized O(1) per insert.
 
 ---
