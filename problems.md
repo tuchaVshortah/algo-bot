@@ -40,8 +40,8 @@ Given a sorted array of size n, which is faster:
 ### Problem 4: Amortized cost of stack with occasional doubling
 A stack starts empty; on overflow it doubles capacity. Show that n push operations take O(n) total time.
 
-• Hint: Account for each element’s moves across resizing.
-• Solution:
+• Hint: Account for each element’s moves across resizing. \
+• Solution: \
   Total copy cost ≤ 1 + 2 + 4 + … + n = 2n−1 = O(n); spread across n pushes ⇒ O(1) amortized.
 
 ---
@@ -50,6 +50,6 @@ A stack starts empty; on overflow it doubles capacity. Show that n push operatio
 
 T(n) = 4T(n/2) + n² log n
 
-• Hint: Compare f(n) = n² log n to n^{log₂4}=n².
-• Solution:
+• Hint: Compare f(n) = n² log n to n^{log₂4}=n². \
+• Solution: \
   f(n)=Θ(n² log n) = Θ(n^{log_b a}·log n) ⇒ T(n)=Θ(n² log² n) (Case 2 with extra log factor).
